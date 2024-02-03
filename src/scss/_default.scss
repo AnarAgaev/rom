@@ -1,0 +1,105 @@
+@import 'scss-vars';
+
+*,
+*:before,
+*:after {
+    outline: none !important;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
+}
+
+// Removing clear field icon in IE
+input[type="text"]::-ms-clear {
+    display: none;
+}
+
+// Removing the password display icon in IE
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    color: var(--color-font-primary);
+    font-family: var(--font-family);
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+
+#header,
+#footer {
+    flex: none;
+}
+
+#main {
+    flex: 1 0 auto;
+}
+
+.invisible {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+    z-index: -1 !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.transition-block {
+    transition: none !important;
+
+    &:before,
+    &:after {
+        transition: none !important;
+    }
+
+    *,
+    *:before,
+    *:after {
+        transition: none !important;
+    }
+}
+
+.action-block {
+    pointer-events: none !important;
+    user-select: none !important;
+
+    &:before,
+    &:after {
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+
+    *,
+    *:before,
+    *:after {
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+}
