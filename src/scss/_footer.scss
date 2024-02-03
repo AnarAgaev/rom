@@ -1,0 +1,30 @@
+@import '../scss/_scss-vars';
+
+.footer {
+    user-select: none;
+
+    &__body {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__copy {
+        color: var(--color-dark);
+        text-align: right;
+        font-size: 10px;
+        line-height: 20px; /* 200% */
+
+        @media (min-width: $lg) {
+            font-size: 12px;
+        }
+
+        @media (min-width: $xxl) {
+            font-size: 14px;
+        }
+
+        @media (min-width: $xxxl) {
+            font-size: 18px;
+        }
+    }
+}

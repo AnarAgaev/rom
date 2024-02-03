@@ -34,23 +34,94 @@ body {
     justify-content: space-between;
 
     margin: 0;
-    padding: 0;
+    padding: 17px 0 19px;
     overflow: hidden;
 
+    background: var(--color-back-prime);
     color: var(--color-font-primary);
     font-family: var(--font-family);
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
+
+    @media (min-width: $lg) {
+        padding-top: 82px;
+        padding-bottom: 79px;
+    }
+
+    @media (min-width: $xl) {
+        padding-top: 69px;
+        padding-bottom: 66px;
+    }
+
+    @media (min-width: $xxl) {
+        padding-top: 109px;
+        padding-bottom: 106px;
+    }
+
+    @media (min-width: $xxxl) {
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
 }
 
-#header,
-#footer {
+.header,
+.footer {
     flex: none;
 }
 
-#main {
+.main {
     flex: 1 0 auto;
+    position: relative;
+    margin: 23px 0 16px;
+
+    @media (min-width: $lg) {
+        margin-top: 37px;
+        margin-bottom: 46px;
+    }
+
+    @media (min-width: $xl) {
+        margin-top: 29px;
+        margin-bottom: 38px;
+    }
+
+    @media (min-width: $xxl) {
+        margin-top: 58px;
+        margin-bottom: 68px;
+    }
+
+    @media (min-width: $xxxl) {
+        margin-top: 41px;
+        margin-bottom: 41px;
+    }
+}
+
+.page-list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300vw;
+    height: 100%;
+    transition: all 3s var(--synth-timing-func);
+}
+
+.page {
+    display: block;
+    width: 100vw;
+    height: 100%;
+
+    &_portfolit {
+        background: lightblue;
+    }
+
+    &_about {
+        background: lightcoral;
+    }
+
+    &_contacts {
+        background: lightgreen;
+    }
 }
 
 .invisible {
@@ -103,3 +174,12 @@ body {
         user-select: none !important;
     }
 }
+
+
+// @media (min-width: $lg) {}
+
+// @media (min-width: $xl) {}
+
+// @media (min-width: $xxl) {}
+
+// @media (min-width: $xxxl) {}
