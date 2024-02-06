@@ -103,24 +103,44 @@ body {
     left: 0;
     width: 300vw;
     height: 100%;
-    transition: all 3s var(--synth-timing-func);
+    transition: all 1.7s var(--synth-timing-func);
 }
 
 .page {
     display: block;
+    position: relative;
     width: 100vw;
     height: 100%;
 
-    &_portfolit {
-        background: lightblue;
+    .container {
+        height: 100%;
     }
 
-    &_about {
-        background: lightcoral;
+    &_portfolit {}
+
+    &_about {}
+
+    &_contacts {}
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 
-    &_contacts {
-        background: lightgreen;
+    &__content {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: all 1s var(--synth-timing-func);
+
+        &.compressed {
+            transform: scale(0.9);
+        }
     }
 }
 
