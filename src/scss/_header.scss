@@ -2,6 +2,23 @@
 
 .header {
     user-select: none;
+    padding-top: 17px;
+
+    @media (min-width: $lg) {
+        padding-top: 82px;
+    }
+
+    @media (min-width: $xl) {
+        padding-top: 69px;
+    }
+
+    @media (min-width: $xxl) {
+        padding-top: 109px;
+    }
+
+    @media (min-width: $xxxl) {
+        padding-top: 95px;
+    }
 
     &__body {
         display: flex;
@@ -15,14 +32,18 @@
             align-items: center;
             justify-content: flex-end;
             align-items: center;
-            gap: 24px;
+            gap: 12px;
 
             @media (min-width: $xxl) {
-                gap: 32px
+                gap: 21px;
             }
 
             @media (min-width: $xxxl) {
                 gap: 54px;
+            }
+
+            @media (min-width: $xxxl) {
+                gap: 42px;
             }
         }
 

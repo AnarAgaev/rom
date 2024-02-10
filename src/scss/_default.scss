@@ -34,8 +34,7 @@ body {
     justify-content: space-between;
 
     margin: 0;
-    padding: 17px 0 19px;
-    overflow: hidden;
+    overflow-x: hidden;
 
     background: var(--color-back-prime);
     color: var(--color-font-primary);
@@ -43,25 +42,30 @@ body {
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
+}
 
-    @media (min-width: $lg) {
-        padding-top: 82px;
-        padding-bottom: 79px;
-    }
-
-    @media (min-width: $xl) {
-        padding-top: 69px;
-        padding-bottom: 66px;
-    }
-
-    @media (min-width: $xxl) {
-        padding-top: 109px;
-        padding-bottom: 106px;
-    }
-
+.container {
     @media (min-width: $xxxl) {
-        padding-top: 95px;
-        padding-bottom: 95px;
+        max-width: 1751px;
+    }
+}
+
+.offset-xxxl-2 {
+    @media (min-width: $xxxl) {
+        margin-left: 16.66666667%;
+    }
+}
+
+.offset-xxxl-1 {
+    @media (min-width: $xxxl) {
+        margin-left: 8.33333333%;
+    }
+}
+
+.col-xxxl-4 {
+    @media (min-width: $xxxl) {
+        flex: 0 0 auto;
+        width: 33.33333333%;
     }
 }
 
@@ -71,34 +75,30 @@ body {
 }
 
 .main {
+    display: flex;
+    align-items: center;
     flex: 1 0 auto;
     position: relative;
-    margin: 23px 0 16px;
+}
 
-    @media (min-width: $lg) {
-        margin-top: 37px;
-        margin-bottom: 46px;
-    }
+.wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-    @media (min-width: $xl) {
-        margin-top: 29px;
-        margin-bottom: 38px;
-    }
-
-    @media (min-width: $xxl) {
-        margin-top: 58px;
-        margin-bottom: 68px;
-    }
-
-    @media (min-width: $xxxl) {
-        margin-top: 41px;
-        margin-bottom: 41px;
-    }
+.pages {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .page-list {
     display: flex;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 300vw;
@@ -116,17 +116,11 @@ body {
         height: 100%;
     }
 
-    &_portfolit {}
-
-    &_about {}
-
-    &_contacts {}
-
     &__wrap {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 100%;
     }
@@ -135,11 +129,22 @@ body {
         display: block;
         position: relative;
         width: 100%;
-        height: 100%;
+        margin: 20px 0;
         transition: all 1s var(--synth-timing-func);
+
+        @media (min-width: $lg) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $xxl) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
 
         &.compressed {
             transform: scale(0.9);
+            filter: blur(3px);
         }
     }
 }
@@ -195,11 +200,62 @@ body {
     }
 }
 
+.title {
+    display: block;
+    font-size: 20px;
+    line-height: 26px; /* 130% */
 
-// @media (min-width: $lg) {}
+    @media (min-width: $lg) {
+        font-size: 24px;
+        line-height: 32px; /* 133.333% */
+    }
 
-// @media (min-width: $xl) {}
+    @media (min-width: $xl) {
+        font-size: 30px;
+        line-height: 42px; /* 140% */
+    }
 
-// @media (min-width: $xxl) {}
+    @media (min-width: $xxl) {
+        font-size: 34px;
+        line-height: 48px; /* 141.176% */
+    }
 
-// @media (min-width: $xxxl) {}
+    @media (min-width: $xxxl) {
+        font-size: 36px;
+        line-height: 48px; /* 133.333% */
+    }
+}
+
+.text {
+    font-size: 10px;
+    line-height: 14px; /* 140% */
+    text-wrap: balance;
+
+    @media (min-width: $lg) {
+        font-size: 12px;
+        line-height: 16px; /* 133.333% */
+    }
+
+    @media (min-width: $xl) {
+        font-size: 12px;
+        line-height: 16px; /* 133.333% */
+    }
+
+    @media (min-width: $xxl) {
+        line-height: 18px; /* 150% */
+    }
+
+    @media (min-width: $xxxl) {
+        font-size: 14px;
+        line-height: 20px; /* 142.857% */
+    }
+}
+
+
+// @media (min-width: $lg) {} 992px
+
+// @media (min-width: $xl) {} 1200px
+
+// @media (min-width: $xxl) {} 1400px
+
+// @media (min-width: $xxxl) {} 1920px

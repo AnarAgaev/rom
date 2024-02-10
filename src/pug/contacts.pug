@@ -1,5 +1,42 @@
-section.page.page_contacts
+section.page.contacts
     .page__wrap
         .page__content
             .container
-                p Contacts
+                .row
+                    .col-6.col-lg-4.col-xxl-3.offset-lg-1.offset-xxxl-2
+                        .contacts__desc
+                            .contacts__header
+                                h2.title Let’s connect!
+                                p.text
+                                    | I’d love to hear from you; whether you want to learn more about my services, want to collaborate on a project, or simply just want to say hello. 
+                                    br
+                                    br
+                                    | You can fill out the form or get in touch with me in Telegram, WhatsApp or by email
+
+                                p.contacts__data
+                                    a(href="tel:+79807011718") +7 980 701 17 18
+                                    a(href="mailto: roman.nadirovich@gmail.com") roman.nadirovich@gmail.com
+
+                            .contacts__footer
+                                ul.contacts__socials
+                                    li
+                                        a.dribble(href="#")
+                                    li
+                                        a.inst(href="#")
+                                    li
+                                        a.twit(href="#")
+                                    li
+                                        a.tele(href="#")
+
+                    .col-6.col-lg-5.col-xxxl-4.offset-lg-1.offset-xxl-2.offset-xxxl-1
+                        .contacts__form
+                            form(action="")
+                                .contacts__form-container
+                                    label.contacts__form-wrap
+                                        input.contacts__form-input(type="text" name="name" placeholder="How may I address you?")
+                                    label.contacts__form-wrap
+                                        input.contacts__form-input(type="text" name="contacts", placeholder="Your contacts (email or phone)")
+                                label.contacts__form-wrap.contacts__form-wrap_text
+                                    textarea.contacts__form-message(name="text" placeholder="Your Message")
+                                button.contacts__form-submit(type="submit")
+                                    span Connect with Romario
