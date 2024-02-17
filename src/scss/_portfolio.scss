@@ -1,0 +1,134 @@
+@import 'scss-vars';
+
+.portfolio {
+
+    .page__content {
+        padding: 40px 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 49px;
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $xxl) {
+            gap: 54px;
+        }
+
+        @media (min-width: $xxxl) {
+            gap: 53px;
+        }
+    }
+
+    &__title {
+        display: none;
+
+        @media (min-width: $lg) {
+            display: block;
+        }
+    }
+
+
+    &__slider {
+        display: block;
+        position: relative;
+        width: calc(100% + 12px);
+        height: 100%;
+
+        @media (min-width: $sm) {
+            width: calc(100% + ((100vw - 540px) / 2) + 12px);
+        }
+
+        @media (min-width: $md) {
+            width: calc(100% + ((100vw - 720px) / 2) + 12px);
+        }
+
+        @media (min-width: $lg) {
+            width: calc(100% + ((100vw - 960px) / 2) + 12px);
+        }
+
+        @media (min-width: $xl) {
+            width: calc(100% + ((100vw - 1140px) / 2) + 12px);
+        }
+
+        @media (min-width: $xxl) {
+            width: calc(100% + ((100vw - 1320px) / 2) + 12px);
+        }
+
+        @media (min-width: $xxxl) {
+            width: calc(100% + ((100vw - 1751px) / 2) + 12px);
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__pic {
+        display: block;
+        position: relative;
+        width: auto;
+
+        img {
+            display: block;
+            position: relative;
+            width: auto;
+            height: 100%;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    &__desc {
+        flex-shrink: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    &__number {
+        color: var(--color-dark);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 133.333% */
+    }
+
+    &__name {
+        color: var(--color-primary);
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 133.333% */
+    }
+
+    &__year {
+        width: 100%;
+        height: auto;
+        color: var(--color-dark);
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 133.333% */
+    }
+}

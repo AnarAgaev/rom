@@ -50,6 +50,7 @@
         &__item {
             display: block;
             position: relative;
+            padding-bottom: 6px;
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
@@ -64,7 +65,7 @@
                 content: '';
                 display: block;
                 position: absolute;
-                bottom: -6px;
+                bottom: 0;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 0;
