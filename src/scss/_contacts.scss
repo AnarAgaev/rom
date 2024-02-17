@@ -2,14 +2,14 @@
 
 .contacts {
 
+    .row {
+        height: 100%;
+    }
+
     .text {
         @media (min-width: $xxxl) {
             padding-right: 25%;
         }
-    }
-
-    .row {
-        height: 100%;
     }
 
     &__desc {
