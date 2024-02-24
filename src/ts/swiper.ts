@@ -5,7 +5,7 @@ const initSwiper = (): void => {
 
     new Swiper('.swiper', {
         slidesPerView: "auto",
-        spaceBetween: 36,
+        // spaceBetween: 36,
         loop: false,
         observer: true,
         observeParents: true,

@@ -79,6 +79,28 @@ body {
     align-items: center;
     flex: 1 0 auto;
     position: relative;
+    height: calc(100% - 80px);
+    min-height: calc(360px - 80px);
+
+    @media (min-width: $lg) {
+        height: calc(100% - 204px);
+        min-height: calc(768px - 204px);
+    }
+
+    @media (min-width: $xl) {
+        height: calc(100% - 178px);
+        min-height: calc(768px - 178px);
+    }
+
+    @media (min-width: $xxl) {
+        height: calc(100% - 259px);
+        min-height: calc(1024px - 300px);
+    }
+
+    // @media (min-width: $xxxl) {
+    //     height: calc(100% - 259px);
+    //     min-height: calc(1080px - 238px);
+    // }
 }
 
 .wrapper {
