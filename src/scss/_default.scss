@@ -6,6 +6,11 @@
     outline: none !important;
     box-sizing: border-box;
     text-decoration: none;
+
+    // Hiding scrollbar for all browsers
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow: -moz-scrollbars-none; /* Firefox */
 }
 
 html {
