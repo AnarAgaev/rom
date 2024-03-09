@@ -42,7 +42,7 @@ const togglePage = (pageIdx: number): void => {
     if (pagesContainer) {
         setTimeout(
             () => pagesContainer.style.transform = `translateX(${offset}%)`,
-            500
+            300
         )
     }
 }

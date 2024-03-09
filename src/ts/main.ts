@@ -1,7 +1,7 @@
 import initNav from './nav'
-import initSwiper from './swiper'
+import initPortfolioSwiper from './swiper'
 
 window.addEventListener('load', () => {
     initNav()
-    initSwiper()
+    initPortfolioSwiper()
 })
