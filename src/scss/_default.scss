@@ -11,6 +11,8 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     overflow: -moz-scrollbars-none; /* Firefox */
+
+    // box-shadow: inset 0 0 0 1px red;
 }
 
 html {
@@ -86,6 +88,7 @@ body {
     position: relative;
     height: calc(100% - 80px);
     min-height: calc(360px - 80px);
+    // min-height: 300px;
 
     @media (min-width: $lg) {
         height: calc(100% - 204px);

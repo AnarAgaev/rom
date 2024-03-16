@@ -1,20 +1,18 @@
 import Swiper from 'swiper'
 import { Scrollbar, Mousewheel } from 'swiper/modules'
-import 'swiper/swiper-bundle.css'
 
 const initPortfolioSwiper = (): void => {
-    Swiper.use([Scrollbar, Mousewheel]);
+    Swiper.use([Scrollbar, Mousewheel])
 
-    new Swiper('.swiper', {
+    new Swiper('.portfolio__slider .swiper', {
         speed: 300,
         slidesPerView: 'auto',
-        // spaceBetween: 36,
         loop: false,
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
         watchOverflow: true,
-        grabCursor: true,
+        // grabCursor: true,
         mousewheel: true,
 
         // freeMode: {
@@ -24,11 +22,9 @@ const initPortfolioSwiper = (): void => {
         // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
-            draggable: true,
+            // draggable: true,
         },
-    });
-
-
+    })
 }
 
 export default initPortfolioSwiper
