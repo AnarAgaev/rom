@@ -363,20 +363,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            position: relative;
-            padding: 0;
             top: -1px;
-            cursor: pointer;
-            border: none;
-            color: var(--color-primary);
-            font-size: 10px;
-            font-weight: 600;
-            background: transparent;
-            margin-right: auto;
-            opacity: 1;
+            transition: var(--base-transition);
 
             @media (min-width: $lg) {
-                font-size: 12px;
                 top: 0;
             }
 
@@ -390,17 +380,43 @@
 
             @media (min-width: $xxxl) {
                 top: -4px;
-                font-size: 14px;
-                line-height: normal;
             }
 
-            @media (hover: hover) and (pointer: fine) {
-                &:hover {
-                    opacity: 0.4;
+            button {
+                position: relative;
+                padding: 0;
+                top: -1px;
+                cursor: pointer;
+                border: none;
+                color: var(--color-primary);
+                font-size: 10px;
+                font-weight: 600;
+                background: transparent;
+                opacity: 1;
+                transition: var(--base-transition);
+
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        opacity: 0.8;
+
+                        & + span {
+                            opacity: 0.6;
+                            transform: translateX(3px);
+                        }
+                    }
+                }
+
+                @media (min-width: $lg) {
+                    font-size: 12px;
+                }
+
+                @media (min-width: $xxxl) {
+                    font-size: 14px;
+                    line-height: normal;
                 }
             }
 
-            &::after {
+            span {
                 content: '';
                 display: block;
                 position: relative;
@@ -409,6 +425,8 @@
                 background: transparent no-repeat center;
                 background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNiAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgNC41QzEuNzIzODYgNC41IDEuNSA0LjcyMzg2IDEuNSA1QzEuNSA1LjI3NjE0IDEuNzIzODYgNS41IDIgNS41VjQuNVpNMTQuMzUzNiA1LjM1MzU1QzE0LjU0ODggNS4xNTgyOSAxNC41NDg4IDQuODQxNzEgMTQuMzUzNiA0LjY0NjQ1TDExLjE3MTYgMS40NjQ0N0MxMC45NzYzIDEuMjY5MiAxMC42NTk3IDEuMjY5MiAxMC40NjQ1IDEuNDY0NDdDMTAuMjY5MiAxLjY1OTczIDEwLjI2OTIgMS45NzYzMSAxMC40NjQ1IDIuMTcxNTdMMTMuMjkyOSA1TDEwLjQ2NDUgNy44Mjg0M0MxMC4yNjkyIDguMDIzNjkgMTAuMjY5MiA4LjM0MDI3IDEwLjQ2NDUgOC41MzU1M0MxMC42NTk3IDguNzMwOCAxMC45NzYzIDguNzMwOCAxMS4xNzE2IDguNTM1NTNMMTQuMzUzNiA1LjM1MzU1Wk0yIDUuNUgxNFY0LjVIMlY1LjVaIiBmaWxsPSIjMEQwNjAxIi8+Cjwvc3ZnPgo=");
                 background-size: cover;
+                transition: var(--base-transition);
+                transform: translateX(0);
 
                 @media (min-width: $lg) {
                     width: 16px;

@@ -8,15 +8,21 @@ const pageSize: number = 100 / pageCount
 // Transition start handler
 pagesContainer?.addEventListener(
     'transitionstart',
-    () => body?.classList.add('action-block')
+    (event) => {
+        if (event.target === pagesContainer) {
+            body?.classList.add('action-block');
+        }
+    }
 )
 
 // Transition end handler
 pagesContainer?.addEventListener(
     'transitionend',
-    () => {
-        body?.classList.remove('action-block')
-        uncompressPage()
+    (event) => {
+        if (event.target === pagesContainer) {
+            body?.classList.remove('action-block')
+            uncompressPage()
+        }
     }
 )
 
