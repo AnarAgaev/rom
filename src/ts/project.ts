@@ -5,7 +5,6 @@ interface CustomSwiper extends Swiper {
     slides: HTMLElement[]
 }
 
-
 const showProject = (project: HTMLDivElement) => {
     const projectList: HTMLDivElement | null = document
         .querySelector('.project__list')

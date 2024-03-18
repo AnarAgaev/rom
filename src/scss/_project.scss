@@ -16,7 +16,7 @@
         transition: all 0s linear .1s;
 
         &.show {
-            z-index: 999;
+            z-index: 10;
             opacity: 1;
             transition: all 0s linear;
             pointer-events: all;
@@ -51,11 +51,15 @@
     &__item {
         display: flex;
         align-items: center;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
 
         &.show {
+            z-index: 1;
+
             .project__close {
                 opacity: 1;
                 margin-top: 0;
@@ -393,7 +397,14 @@
             letter-spacing: -1.44px;
         }
 
+        &_current {
+            min-width: 20px;
+            text-align: right;
+            margin-left: -5px;
+        }
+
         mark {
+            display: inline-block;
             color: var(--color-dark);
             background: transparent;
             padding: 0;
