@@ -1,6 +1,5 @@
 const initLoading = () => {
 
-    const loading = document.getElementById('loading');
     const circle = document.getElementById('loadingCircle')
     const value = document.getElementById('loadingValue')
 
@@ -39,10 +38,6 @@ const initLoading = () => {
                     setTimeout(setLoading, delay)
                     return
                 }
-
-                loading?.classList.add('loaded')
-
-                setTimeout(() => loading?.remove(), 1000)
             }
         }, 20)
     }
@@ -50,4 +45,10 @@ const initLoading = () => {
     setLoading()
 }
 
-export default initLoading
+const hideLoading = () => {
+    const loading = document.getElementById('loading');
+    loading?.classList.add('loaded')
+    setTimeout(() => loading?.remove(), 1000)
+}
+
+export { initLoading, hideLoading }
