@@ -5,7 +5,7 @@
             "number": "01",
             "name": "Liberation",
             "year": 2021,
-            "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg",
+            "img": "img/liberation.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -16,23 +16,23 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     }
                 ]
             }
@@ -42,7 +42,7 @@
             "number": "02",
             "name": "Icelandic Mail App",
             "year": 2022,
-            "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg",
+            "img": "img/icelandic.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -53,19 +53,19 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     }
                 ]
             }
@@ -75,7 +75,7 @@
             "number": "03",
             "name": "Name of the Project",
             "year": 2023,
-            "img": "https://anaragaev.github.io/rom-port/img/father.jpg",
+            "img": "img/father.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -86,23 +86,23 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     }
                 ]
             }
@@ -112,7 +112,7 @@
             "number": "04",
             "name": "App",
             "year": 2024,
-            "img": "https://anaragaev.github.io/rom-port/img/app.jpg",
+            "img": "img/app.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -123,23 +123,23 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     }
                 ]
             }
@@ -149,7 +149,7 @@
             "number": "05",
             "name": "Icelandic Mail App",
             "year": 2025,
-            "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg",
+            "img": "img/icelandic.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -160,23 +160,23 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     }
                 ]
             }
@@ -186,7 +186,7 @@
             "number": "06",
             "name": "Name of the Project",
             "year": 2026,
-            "img": "https://anaragaev.github.io/rom-port/img/father.jpg",
+            "img": "img/father.jpg",
             "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
@@ -197,23 +197,23 @@
                 "items": [
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/app.jpg"
+                        "img": "img/app.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/father.jpg"
+                        "img": "img/father.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/icelandic.jpg"
+                        "img": "img/icelandic.jpg"
                     },
                     {
                         "description": "",
-                        "img": "https://anaragaev.github.io/rom-port/img/liberation.jpg"
+                        "img": "img/liberation.jpg"
                     }
                 ]
             }

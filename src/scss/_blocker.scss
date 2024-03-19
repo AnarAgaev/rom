@@ -5,7 +5,7 @@ body.isBlocked {
     transition: none !important;
     animation: none !important;
 
-    *:not(.blocker__pic) {
+    *:not(.blocker__pic):not(.loading):not(.loading__back):not(.loading__body) {
         transition: none !important;
         animation: none !important;
     }
