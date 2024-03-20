@@ -10,7 +10,15 @@ interface Contacts {
     socials?: {[key: string]: string}
 }
 
+interface About {
+    title?: string
+    message?: string
+    photo?: string
+    skills?: string[]
+}
+
 interface Data {
+    about: About
     contacts: Contacts
 }
 
@@ -57,16 +65,41 @@ const setContacts = (contacts: Contacts) => {
     }
 }
 
+const setAbout = (about: About) => {
+    const title: HTMLHeadElement | null = document.getElementById('aboutTitle')
+    if (title && about.title) title.innerHTML = about.title
+
+    const message: HTMLParagraphElement | null = document.querySelector('#aboutMessage')
+    if (message && about.message) message.innerHTML = about.message
+
+    const skillList: HTMLUListElement | null = document.querySelector('#aboutSkills')
+    if (skillList && about.skills) {
+        const skills = about.skills
+
+        for (const skill of skills) {
+            const li = document.createElement('li')
+
+            li.classList.add('list-item')
+            li.innerHTML = skill
+
+            skillList.appendChild(li)
+        }
+    }
+
+    const photo: HTMLDivElement | null = document.querySelector('#aboutPhoto')
+    if (photo && about.photo) {
+        const img = document.createElement('img')
+        img.src = about.photo
+        photo.appendChild(img)
+    }
+}
+
 const setData = (data: Data) => {
     console.log(data);
 
-
+    setAbout(data.about)
     setContacts(data.contacts)
-
-
-
     // hideLoading()
-    
 }
 
 const requestData = async () => {
