@@ -6,7 +6,7 @@
             "name": "Liberation",
             "year": 2021,
             "img": "img/liberation.jpg",
-            "projects": {
+            "project": {
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
                 "contacts": {
@@ -47,8 +47,7 @@
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
                 "contacts": {
-                    "dribbble": "https://dribbble.com/",
-                    "instagram": "https://www.instagram.com/"
+                    "dribbble": "https://dribbble.com/"
                 },
                 "items": [
                     {
@@ -117,7 +116,6 @@
                 "title": "E-commerce & Blog Interface",
                 "description": "I present to your attention the design concept of an online store combined with a blog. I wanted to pay tribute to a beautiful girl, a ceramist - Marina Lozova. I did not find anything better than to make this concept for her store.",
                 "contacts": {
-                    "dribbble": "https://dribbble.com/",
                     "instagram": "https://www.instagram.com/"
                 },
                 "items": [

@@ -1,4 +1,5 @@
 import { initLoading, hideLoading } from "./loading"
+import { initProjects, initProjectSwipers } from "../ts/project"
 
 interface Contacts {
     address: string
@@ -23,7 +24,7 @@ interface Portfolio {
     img: string
     number?: string
     year?: number
-    projects?: Project[]
+    project?: Project
 }
 
 interface Project {
@@ -39,10 +40,83 @@ interface Data {
     contacts: Contacts
 }
 
+const getProject = (project: Project, id: string): HTMLElement => {
+    const projectItem = document.createElement('div')
+    projectItem.classList.add('project__item')
+    projectItem.setAttribute('data-project', id)
+
+    let item = `
+<div class="container">
+    <div class="row">
+        <div class="col-4 col-lg-3 offset-lg-1">
+            <div class="project__content">
+                <button class="project__close" type="button"><span></span></button>
+                <div class="project__desc">
+                    <h2 class="project__title">${project.title}</h2>
+                    <p class="project__text">${project.description}</p>
+                    <div class="project__controllers">
+                        <span class="project__nav project__nav_prev"><i></i></span>
+                        <div class="project__pagination">
+                            <mark class="project__pagination_current">1</mark>
+                            <span>&nbsp;</span>
+                            <i></i>
+                            <span>&nbsp;</span>
+                            <mark class="project__pagination_all">${project?.items?.length}</mark>
+                        </div>
+                        <span class="project__nav project__nav_next"><i></i></span>
+                    </div>
+                </div>
+                <ul class="project__socials">`
+
+    if (project.contacts) {
+        for (const contact in project.contacts) {
+            item += `<li><a href="${project.contacts[contact]}" target="_blank">${contact}</a></li>`
+        }
+    }
+
+    item += `
+                </ul>
+            </div>
+        </div>
+        <div class="col-8 col-lg-8 project__slider-container">
+            <div class="project__slider-wrap">
+                <div class="project__slider">
+                    <div class="project__slider-body">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">`
+
+    if (project.items) {
+        for (const slide of project.items) {
+            item += `
+                                <div class="swiper-slide">
+                                    <div class="project__slide">
+                                        <img src="${slide.img}" alt="${slide.description}">
+                                    </div>
+                                </div>`
+        }
+    }
+
+    item += `
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+
+    projectItem.innerHTML = item
+    return projectItem
+}
+
 const setPortfolio = (portfolio: Portfolio[]) => {
+    const projectList: HTMLDivElement | null = document.querySelector("#projectList")
     const portfolioList: HTMLDivElement | null = document.querySelector("#portfolio")
 
-    for (const project of portfolio) {
+    for (let i = 0; i < portfolio.length; i++) {
+        const item = portfolio[i]
+
         const swiperSlide = document.createElement('div')
         swiperSlide.classList.add('swiper-slide')
 
@@ -54,26 +128,26 @@ const setPortfolio = (portfolio: Portfolio[]) => {
 
         const portfolioPic = document.createElement('div')
         portfolioPic.classList.add('portfolio__pic')
-        portfolioPic.setAttribute('data-project-name', `project-${project.id}`)
+        portfolioPic.setAttribute('data-project-name', `project-${item.id}`)
 
         const img = document.createElement('img')
-        img.src = project.img
-        img.alt = project.name
+        img.src = item.img
+        img.alt = item.name
 
         const portfolioDesc = document.createElement('div')
         portfolioDesc.classList.add('portfolio__desc')
 
         const portfolioNumber = document.createElement('div')
         portfolioNumber.classList.add('portfolio__number')
-        if (project.number) portfolioNumber.innerHTML = `/ ${project.number}`
+        if (item.number) portfolioNumber.innerHTML = `/ ${item.number}`
 
         const portfolioName = document.createElement('div')
         portfolioName.classList.add('portfolio__name')
-        if (project.name) portfolioName.innerHTML = project.name
+        if (item.name) portfolioName.innerHTML = item.name
 
         const portfolioYear = document.createElement('div')
         portfolioYear.classList.add('portfolio__year')
-        if (project.year) portfolioYear.innerHTML = project.year.toString()
+        if (item.year) portfolioYear.innerHTML = item.year.toString()
 
         // Building slide
         swiperSlide.appendChild(portfolioSlide)
@@ -87,6 +161,26 @@ const setPortfolio = (portfolio: Portfolio[]) => {
 
         // Push slide to portfolio list
         portfolioList?.appendChild(swiperSlide)
+
+        // Add slider with project elements for current portfolio item
+        if (item.project) {
+            projectList?.appendChild(
+                getProject(
+                    item.project,
+                    `project-${item.id}`
+                )
+            )
+        }
+
+        const LOADING_DURATION = 5000
+
+        if (i === portfolio.length - 1) {
+            setTimeout(()=> {
+                initProjects()
+                initProjectSwipers()
+                hideLoading()
+            }, LOADING_DURATION)
+        }
     }
 }
 
@@ -163,12 +257,9 @@ const setAbout = (about: About) => {
 }
 
 const setData = (data: Data) => {
-    console.log(data);
-
     setPortfolio(data.portfolio)
     setAbout(data.about)
     setContacts(data.contacts)
-    // hideLoading()
 }
 
 const requestData = async () => {
