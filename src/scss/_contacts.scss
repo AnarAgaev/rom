@@ -18,28 +18,23 @@
         justify-content: space-between;
         gap: 28px;
         width: 100%;
-        // top: 9px;
         position: relative;
         gap: 46px;
 
         @media (min-width: $lg) {
             gap: 96px;
-            // top: 27px;
         }
 
         @media (min-width: $xl) {
             gap: 85px;
-            // top: 25px;
         }
 
         @media (min-width: $xxl) {
             gap: 69px;
-            // top: 35px;
         }
 
         @media (min-width: $xxxl) {
             gap: 53px;
-            // top: 67px;
         }
     }
 
@@ -185,25 +180,8 @@
 
     &__form {
         position: relative;
-        // top: 9px;
         width: 100%;
         height: 100%;
-
-        @media (min-width: $lg) {
-            // top: 27px;
-        }
-
-        @media (min-width: $xl) {
-            // top: 25px;
-        }
-
-        @media (min-width: $xxl) {
-            // top: 35px;
-        }
-
-        @media (min-width: $xxxl) {
-            // top: 67px;
-        }
 
         form {
             display: flex;

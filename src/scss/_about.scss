@@ -66,8 +66,6 @@
         overflow: hidden;
         top: 50%;
         transform: translateY(-50%);
-        // width: 350px;
-        // height: 464px;
         width: auto;
         height: 60.41666666666667vh;
         min-height: 400px;
@@ -78,16 +76,12 @@
         background-image: url('../../img/placeholder.png');
 
         @media (min-width: $xxl) {
-            // width: 410px;
-            // height: 543px;
             height: 53.02734375vh;
             min-height: 500px;
             aspect-ratio: 410 / 543;
         }
 
         @media (min-width: $xxxl) {
-            // width: 554px;
-            // height: 734px;
             height: 67.96296296296296vh;
             min-height: 600px;
             aspect-ratio: 554 / 734;
