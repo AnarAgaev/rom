@@ -6,31 +6,23 @@ section.page.contacts
                     .col-6.col-lg-4.col-xxl-3.offset-lg-1.offset-xxxl-2
                         .contacts__desc
                             .contacts__header
-                                h2.title Let’s connect!
+                                h2#contactsTitle.title
                                 p.text
-                                    | I’d love to hear from you; whether you want to learn more about my services, want to collaborate on a project, or simply just want to say hello. 
+                                    span#contactsMessage
                                     br
                                     br
-                                    | You can fill out the form or get in touch with me in Telegram, WhatsApp or by email
+                                    span#contactsInstructions
 
                                 p.contacts__data
-                                    a(href="tel:+79807011718") +7 980 701 17 18
-                                    a(href="mailto: roman.nadirovich@gmail.com") roman.nadirovich@gmail.com
+                                    a#contactsPhone
+                                    a#contactsMail
 
                             .contacts__footer
-                                ul.contacts__socials
-                                    li
-                                        a.dribble(href="#")
-                                    li
-                                        a.inst(href="#")
-                                    li
-                                        a.twit(href="#")
-                                    li
-                                        a.tele(href="#")
+                                ul#contactsSocials.contacts__socials
 
                     .col-6.col-lg-5.col-xxxl-4.offset-lg-1.offset-xxl-2.offset-xxxl-1
                         .contacts__form
-                            form(action="https://formspree.io/f/mzbnaeqr" method="post")
+                            form#contactsForm(action="" method="post")
                                 .contacts__form-container
                                     label.contacts__form-wrap
                                         input.contacts__form-input(type="text" name="name" placeholder="How may I address you?")
