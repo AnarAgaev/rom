@@ -17,9 +17,77 @@ interface About {
     skills?: string[]
 }
 
+interface Portfolio {
+    id: string | number
+    name: string
+    img: string
+    number?: string
+    year?: number
+    projects?: Project[]
+}
+
+interface Project {
+    title?: string
+    description?: string
+    contacts?: {[key: string]: string}
+    items?: {description: string, img: string}[]
+}
+
 interface Data {
+    portfolio: Portfolio[]
     about: About
     contacts: Contacts
+}
+
+const setPortfolio = (portfolio: Portfolio[]) => {
+    const portfolioList: HTMLDivElement | null = document.querySelector("#portfolio")
+
+    for (const project of portfolio) {
+        const swiperSlide = document.createElement('div')
+        swiperSlide.classList.add('swiper-slide')
+
+        const portfolioSlide = document.createElement('div')
+        portfolioSlide.classList.add('portfolio__slide')
+
+        const portfolioItem = document.createElement('div')
+        portfolioItem.classList.add('portfolio__item')
+
+        const portfolioPic = document.createElement('div')
+        portfolioPic.classList.add('portfolio__pic')
+        portfolioPic.setAttribute('data-project-name', `project-${project.id}`)
+
+        const img = document.createElement('img')
+        img.src = project.img
+        img.alt = project.name
+
+        const portfolioDesc = document.createElement('div')
+        portfolioDesc.classList.add('portfolio__desc')
+
+        const portfolioNumber = document.createElement('div')
+        portfolioNumber.classList.add('portfolio__number')
+        if (project.number) portfolioNumber.innerHTML = `/ ${project.number}`
+
+        const portfolioName = document.createElement('div')
+        portfolioName.classList.add('portfolio__name')
+        if (project.name) portfolioName.innerHTML = project.name
+
+        const portfolioYear = document.createElement('div')
+        portfolioYear.classList.add('portfolio__year')
+        if (project.year) portfolioYear.innerHTML = project.year.toString()
+
+        // Building slide
+        swiperSlide.appendChild(portfolioSlide)
+        portfolioSlide.appendChild(portfolioItem)
+        portfolioItem.appendChild(portfolioPic)
+        portfolioItem.appendChild(portfolioDesc)
+        portfolioPic.appendChild(img)
+        portfolioDesc.appendChild(portfolioNumber)
+        portfolioDesc.appendChild(portfolioName)
+        portfolioDesc.appendChild(portfolioYear)
+
+        // Push slide to portfolio list
+        portfolioList?.appendChild(swiperSlide)
+    }
 }
 
 const setContacts = (contacts: Contacts) => {
@@ -97,6 +165,7 @@ const setAbout = (about: About) => {
 const setData = (data: Data) => {
     console.log(data);
 
+    setPortfolio(data.portfolio)
     setAbout(data.about)
     setContacts(data.contacts)
     // hideLoading()
@@ -114,6 +183,5 @@ const requestData = async () => {
         console.error('An error occurred:', error)
     }
 }
-
 
 export default requestData
