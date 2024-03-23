@@ -263,7 +263,7 @@ const setData = (data: Data) => {
 }
 
 const requestData = async () => {
-    // initLoading()
+    initLoading()
     try {
         const res = await fetch('data/data.json')
         if (!res.ok) {

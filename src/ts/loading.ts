@@ -1,12 +1,15 @@
 const initLoading = () => {
-
-    const circle = document.getElementById('loadingCircle')
-    const value = document.getElementById('loadingValue')
-
+    const slide = document.getElementById('loadingSlide')
     const MAX_DELAY_BETWEEN_STEPS = 1000
-    const INIT_DASHOFFSET = parseFloat(circle?.getAttribute('stroke-dashoffset') as string)
 
-    let currentLoaderPercent = 0
+    let slideWidth = 0
+
+    if (slide) {
+        const slideStyle = window.getComputedStyle(slide);
+        slideWidth = parseFloat(slideStyle.getPropertyValue('width'))
+    }
+
+    let currentWidthPercentValue = slideWidth
     let currentStep = 0
 
     const steps = [
@@ -18,18 +21,13 @@ const initLoading = () => {
 
     const setLoading = () => {
         const intervalId = setInterval(() => {
-            currentLoaderPercent++
+            currentWidthPercentValue++
 
-            if (currentLoaderPercent >= 100) currentLoaderPercent = 100
+            if (currentWidthPercentValue >= 100) currentWidthPercentValue = 100
 
-            const stroke = (INIT_DASHOFFSET - INIT_DASHOFFSET / 100 * currentLoaderPercent) + 'px'
+            if (slide) slide.style.width = currentWidthPercentValue + '%'
 
-            if (value && circle) {
-                circle.setAttribute('stroke-dashoffset', stroke)
-                value.innerHTML = `${currentLoaderPercent}%`
-            }
-
-            if (currentLoaderPercent >= steps[currentStep]) {
+            if (currentWidthPercentValue >= steps[currentStep]) {
                 currentStep++
                 clearInterval(intervalId)
 
@@ -46,9 +44,9 @@ const initLoading = () => {
 }
 
 const hideLoading = () => {
-    // const loading = document.getElementById('loading');
-    // loading?.classList.add('loaded')
-    // setTimeout(() => loading?.remove(), 1000)
+    const loading = document.getElementById('loading');
+    loading?.classList.add('loaded')
+    setTimeout(() => loading?.remove(), 1000)
 }
 
 export { initLoading, hideLoading }
