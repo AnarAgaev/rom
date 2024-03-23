@@ -46,9 +46,9 @@ const initLoading = () => {
 }
 
 const hideLoading = () => {
-    const loading = document.getElementById('loading');
-    loading?.classList.add('loaded')
-    setTimeout(() => loading?.remove(), 1000)
+    // const loading = document.getElementById('loading');
+    // loading?.classList.add('loaded')
+    // setTimeout(() => loading?.remove(), 1000)
 }
 
 export { initLoading, hideLoading }
