@@ -103,6 +103,7 @@ const initProjectSwipers = () => {
                         countSlides.innerText = (this.slides.length).toString()
                     } else {
                         projectControllers?.classList.add('hide')
+                        swiper.classList.add('single-slide')
                     }
                 },
 
